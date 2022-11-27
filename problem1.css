@@ -1,0 +1,7 @@
+a:hover {
+  color: orange;
+}
+a:focus {
+  background-color: white;
+  color: green;
+}

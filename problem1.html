@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="problem1.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Question 1</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      x-data="{tab:'Features'}"
+      class="w-96 mx-auto border-l border-t border-b border-r rounded-t lg\:h-auto m-4"
+    >
+      <div
+        class="flex w-full text-center hover:text-orange bg-gray-100 border border-1"
+      >
+        <a
+          class="p-5 w-full border-r border-1 hover:text-orange text-blue-700"
+          @click.prevent="tab = 'Features'"
+          href="#"
+          :class="{'-mb-px': tab==='Features'}"
+          >Features</a
+        >
+        <a
+          class="p-5 w-full text-blue-700"
+          @click.prevent="tab = 'details'"
+          href="#"
+          :class="{'-mb-px':tab==='details'}"
+          >Details</a
+        >
+      </div>
+      <div class="p-5 prose">
+        <div x-show="tab === 'Features'">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div x-show="tab === 'details'">
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
